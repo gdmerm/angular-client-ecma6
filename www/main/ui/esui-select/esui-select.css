@@ -1,0 +1,100 @@
+.es-select {
+    position: relative;
+}
+
+.es-select .es-select-toggle-icon {
+    position:absolute;
+    right:8px;
+    top:6px;
+    font-size:1.2em;
+    color:#666;
+    transition: transform 250ms ease;
+    -webkit-transition: -webkit-transform 250ms ease;
+    transform-origin: left .5em;
+    -webkit-transform-origin: left .5em;
+}
+.es-select .es-select-toggle-expanded {
+    transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+    top:12px;
+}
+.es-select:hover .es-select-toggle-icon {
+    color:#333;
+}
+
+.es-select button {
+    border-radius: 0;
+    border:0;
+    background: rgba(200, 200, 200, .14);
+    text-align: left;
+}
+.es-select button:hover {
+    box-shadow: 0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+}
+
+.es-select-options {
+    width:100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin-top:0;
+    border-top:0;
+    border-radius: 0 0 4px 4px;
+}
+.es-select-options.show {
+    display:block;
+}
+
+.es-select-options input[type="text"],
+.es-select-options input[type="text"]:focus {
+    width:100%;
+    background-color: #fff;
+    margin:8px 0;
+    padding:4px 4px;
+    border:0;
+    outline:0;
+}
+.es-select-options input[type="text"] ~ span {
+    position:absolute;
+    top:14px;
+    right:10px;
+    color:#666;
+}
+
+.es-select-option-scroller {
+    max-height:350px;
+    overflow-x:hidden;
+    overflow-y:auto;
+    padding-right:8px;
+    -webkit-overflow-scrolling: touch;
+    position:relative;
+}
+
+.es-select li a {
+    color:#333;
+}
+
+.es-select li {
+    padding: 4px;
+}
+.es-select li.hovered,
+.es-select li.keyboard-selected {
+    background-color:#f2f2f2;
+}
+
+.es-select li:hover {
+    background-color:#f5f5f5;
+}
+
+.es-select li.es-select-option-selected {
+    background-color:rgba(176, 223, 244, 0.58);
+}
+
+.es-select-option-selected {
+    background-color:#f1f1f1;
+}
+
+/* validations */
+.es-select.ng-touched.ng-invalid button {
+    background:rgba(244, 201, 200, 0.47);
+    border:solid 1px #F7B9B9;
+}

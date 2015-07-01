@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Entersoft Web Reporter - A Public Query Visualization Tool</title>
+    <meta name="description" content="">
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' name='viewport' />
+    
+    <!-- build:css(vendor) -->
+    <link rel="stylesheet" href="jspm_packages/bower/bootstrap@3.3.5/dist/css/bootstrap.min.css">
+    <!-- end build -->
+
+    <!-- build:css(app) -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="modules/login/login.css">
+    <link rel="stylesheet" href="main/ui/esui-select/esui-select.css">
+    <!-- end build -->
+ 
+</head>
+
+<body ng-app="app">
+
+    <div class="wrapper">
+        <layout-site-navigation></layout-site-navigation>
+
+        <div class="container">
+            <!-- All angular views are loaded at this DOM level -->
+            <div ng-view="" class="ng-view-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- build:js(app) -->
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+    <script>System.import('boot@0.0.1');</script>
+    <!-- endbuild -->
+
+</body>
+</html>
